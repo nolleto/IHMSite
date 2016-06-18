@@ -1,32 +1,136 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title></title>
+  	<title>IHM</title>
+    <meta charset="utf-8">
+
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/app.css"/>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Consultoria Nolleto</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container">
-      <!-- Page Content goes here -->
+
+    <nav class="grey darken-4" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="index.html" class="brand-logo">Página Inicial</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="localizacao.html">Localização</a></li>
+      </ul>
+  </nav>
+  <div class="acessibilidade">
+    <div id="contraste" class="right">
+      <span>Contraste </span>
+      <i class="material-icons">invert_colors</i>
+      <div class="clearfix"></div>
     </div>
+  </div>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Software Nolleto</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">A melhor software house de Novo Hamburgo</h5>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="section">
+
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="icon-block">
+              <h2 class="center light-blue-text"><i alt="Ícone de um raio" class="material-icons">flash_on</i></h2>
+              <h5 class="center">Desenvolvimento rápido</h5>
+
+              <p class="light">
+                Temos várias equipes ágeis diponíveis, que entregaram para o nosso cliente o produto desejado,
+                sempre em prazos curtos e sistemáticos.
+              </p>
+            </div>
+          </div>
+
+          <div class="col s12 m6">
+            <div class="icon-block">
+              <h2 class="center light-blue-text"><i alt="Ícone com duas pessoas" class="material-icons">group</i></h2>
+              <h5 class="center">Melhor experiencia de usuário</h5>
+
+              <p class="light">
+                Através da utilização de elementos e princípios de design, fomos capazes de criar um enquadramento que incorpore componentes
+                e animações que fornecem mais feedback para os usuários. Além disso, um único sistema responsivo subjacente em todas as plataformas
+                que permitir ao usuário uma experiência mais unificada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+
+      <div class="section">
+        <h3>Portifolio</h3>
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="material-placeholder">
+              <img alt="Imagem de um carro" class="materialboxed responsive-img z-depth-1 initialized" data-caption="Caliber" src="images/caliber.png">
+            </div>
+            <h5 class="center"><a href="http://jumpcatch.com/srinivasan/caliber/" target="_blank">Caliber</a></h5>
+          </div>
+          <div class="col s12 m4">
+            <div class="material-placeholder">
+              <img alt="Imagem de um site esportivo" class="materialboxed responsive-img z-depth-1 initialized" data-caption="RDX Sports" src="images/rdxsports.png">
+            </div>
+            <h5 class="center"><a href="http://rdxsports.com/" target="_blank">RDX Sports</a></h5>
+          </div>
+          <div class="col s12 m4">
+            <div class="material-placeholder">
+              <img alt="Imagem de um site sobre telefone e tablets" class="materialboxed responsive-img z-depth-1 initialized" data-caption="Phandroid" src="images/phandroid.jpg">
+            </div>
+            <h5 class="center"><a href="http://phandroid.com/" target="_blank">Phandroid</a></h5>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="material-placeholder">
+              <img alt="Imagem de um site sobre arte" class="materialboxed responsive-img z-depth-1 initialized" data-caption="Art of Where" src="images/artofwhere.jpg">
+            </div>
+            <h5 class="center"><a href="https://artofwhere.com/" target="_blank">Art of Where</a></h5>
+          </div>
+          <div class="col s12 m6">
+            <div class="material-placeholder">
+              <img alt="Imagem de um site sobre localização de estabelecimentos" class="materialboxed responsive-img z-depth-1 initialized" data-caption="Visit Sarasota" src="images/visitsarasota.jpg">
+            </div>
+            <h5 class="center"><a href="http://explore.visitsarasota.org/visitsarasota" target="_blank">Visit Sarasota</a></h5>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer grey darken-4">
+    <div class="footer-copyright">
+      <div class="container">
+        Felipe Nolleto Nascimento - 0094078
+      </div>
+    </div>
+  </footer>
 
     <!--Import jQuery before materialize.js-->
    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
    <script type="text/javascript" src="js/materialize.min.js"></script>
+   <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

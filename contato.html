@@ -1,32 +1,104 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title></title>
+  	<title>IHM</title>
+    <meta charset="utf-8">
+
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/app.css"/>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Consultoria Nolleto</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container">
-      <!-- Page Content goes here -->
+
+    <nav class="grey darken-4" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="index.html" class="brand-logo">Página Inicial</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li class="active"><a href="contato.html">Contato</a></li>
+        <li><a href="localizacao.html">Localização</a></li>
+      </ul>
+  </nav>
+  <div class="acessibilidade">
+    <div id="contraste" class="right">
+      <span>Contraste </span>
+      <i class="material-icons">invert_colors</i>
+      <div class="clearfix"></div>
     </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="section col s12">
+        <h2>Contato</h2>
+          <form class="">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="nome" type="text" class="validate">
+                <label for="first_name">Nome</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="telefone" type="tel" class="validate">
+                <label for="last_name">Telefone</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="disabled">E-mail</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="mensagem" class="materialize-textarea"></textarea>
+                <label for="mensagem">Mensagem</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input value="Enviar" class="waves-effect waves-light btn grey darken-2" type="submit" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer grey darken-4">
+    <div class="footer-copyright">
+      <div class="container">
+        Felipe Nolleto Nascimento - 0094078
+      </div>
+    </div>
+  </footer>
 
     <!--Import jQuery before materialize.js-->
    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
    <script type="text/javascript" src="js/materialize.min.js"></script>
+   <script type="text/javascript" src="js/app.js"></script>
+   <script>
+    $(document).on('ready', function() {
+      $('form').on('submit', function() {
+        if (checkInput('#nome') && checkInput('#telefone') && checkInput('#email') && checkInput('#mensagem')) {
+          alert('Mensagem enciada com sucesso!');
+        } else {
+          return false;
+        }
+      });
+    });
+
+    function checkInput(selector) {
+      var element = $(selector);
+      return element.val().length > 0;
+    }
+   </script>
   </body>
 </html>

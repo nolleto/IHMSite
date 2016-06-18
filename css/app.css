@@ -1,0 +1,27 @@
+footer.page-footer {
+  padding-top: 0px;
+}
+
+.acessibilidade {
+  position: absolute;
+  top: 68px;
+  right: 0px;
+}
+.acessibilidade > div {
+  cursor: pointer;
+}
+
+.acessibilidade > div > span {
+  position: relative;
+  top: -6px;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
